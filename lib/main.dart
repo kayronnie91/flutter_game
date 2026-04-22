@@ -23,12 +23,26 @@ class DicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image(image: AssetImage('images/dice-six-faces-one.png'),),
-        Image(image: AssetImage('images/dice-six-faces-one.png'),)
-      ],
-
+    return Padding(
+      padding: const EdgeInsets.only(left:8.0, right: 8.0
+      ),
+      child: Center(
+        child: Row(
+          children: [
+            Expanded(
+              child: Image(
+                image: AssetImage('images/dice-six-faces-one.png'),
+              ),
+            ),
+            SizedBox(width: 8),
+            Expanded(
+              child: Image(
+                image: AssetImage('images/dice-six-faces-one.png'),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
